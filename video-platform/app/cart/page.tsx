@@ -55,7 +55,7 @@ export default function CartPage() {
       <div className="w-full px-4 lg:px-12 py-4">
         {/* Header */}
         <div className="mb-6">
-          <Link href="/" className="text-[#9E9A90] hover:text-[#F5F0E8] mb-4 inline-flex items-center gap-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623] rounded-lg">
+          <Link href="/feed" className="text-[#9E9A90] hover:text-[#F5F0E8] mb-4 inline-flex items-center gap-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623] rounded-lg">
             ← Back
           </Link>
           <h1 className="text-2xl font-bold text-[#F5F0E8]">Shopping Cart</h1>
@@ -71,7 +71,7 @@ export default function CartPage() {
             </svg>
             <p className="text-[#9E9A90] mb-2 text-lg font-semibold">Your cart is empty</p>
             <p className="text-[#9E9A90]/70 text-sm mb-6">Browse local businesses and add items</p>
-            <Link href="/" className="inline-block bg-[#F5A623] hover:bg-[#F5A623]/90 text-black font-semibold rounded-xl px-6 py-3 transition-colors active:scale-95">
+            <Link href="/feed" className="inline-block bg-[#F5A623] hover:bg-[#F5A623]/90 text-black font-semibold rounded-xl px-6 py-3 transition-colors active:scale-95">
               Browse Services
             </Link>
           </div>

@@ -190,7 +190,7 @@ export function PostedVideos({ userId, isOwnProfile = true }: PostedVideosProps)
             {/* Video Thumbnail */}
             <div
               className="flex-shrink-0 w-20 h-20 cursor-pointer"
-              onClick={() => router.push(`/?videoId=${video.id}`)}
+              onClick={() => router.push(`/feed?videoId=${video.id}`)}
             >
               <video
                 src={video.video_url}

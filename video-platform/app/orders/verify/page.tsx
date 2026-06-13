@@ -98,7 +98,7 @@ function VerifyContent() {
               <Link href="/dashboard" className="block w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition-colors">
                 Back to Dashboard
               </Link>
-              <Link href="/" className="block w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 rounded-lg transition-colors">
+              <Link href="/feed" className="block w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 rounded-lg transition-colors">
                 Home
               </Link>
             </div>

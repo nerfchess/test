@@ -134,7 +134,7 @@ function PurchaseSuccessContent() {
               View Order History
             </Link>
             <Link
-              href="/"
+              href="/feed"
               className="block w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 rounded-lg transition-colors"
             >
               Back to Home

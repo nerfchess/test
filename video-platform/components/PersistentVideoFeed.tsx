@@ -8,7 +8,7 @@ export function PersistentVideoFeed() {
   const pathname = usePathname();
   const { user, loading } = useAuth();
 
-  const isHome = pathname === '/';
+  const isHome = pathname === '/feed';
 
   // Do not render the feed until auth has resolved.
   // Once the user is authenticated and the feed mounts, it stays mounted.

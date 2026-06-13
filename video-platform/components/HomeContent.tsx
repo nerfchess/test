@@ -205,7 +205,7 @@ export function HomeContent({ isActive }: HomeContentProps) {
     if (idx >= 0) {
       setCurrentIndex(idx);
       // Clean up the URL param
-      router.replace('/', { scroll: false });
+      router.replace('/feed', { scroll: false });
     } else {
       // Video not in feed — fetch and prepend it
       (async () => {
@@ -223,7 +223,7 @@ export function HomeContent({ isActive }: HomeContentProps) {
         } catch (err) {
           console.error('Error fetching video by ID:', err);
         }
-        router.replace('/', { scroll: false });
+        router.replace('/feed', { scroll: false });
       })();
     }
   }, [searchParams, videos.length]); // eslint-disable-line react-hooks/exhaustive-deps

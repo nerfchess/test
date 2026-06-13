@@ -102,12 +102,12 @@ export function DesktopSidebar() {
   if (pathname === '/login' || pathname === '/signup' || pathname === '/reset-password') return null;
 
   const isActive = (href: string) => {
-    if (href === '/') return pathname === '/';
+    if (href === '/feed') return pathname === '/feed';
     return pathname?.startsWith(href);
   };
 
   const navItems = [
-    { href: '/', label: 'Home', icon: 'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z', fill: true },
+    { href: '/feed', label: 'Home', icon: 'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z', fill: true },
     { href: '/search', label: 'Search', icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' },
     { href: '/upload', label: 'Upload', icon: 'M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12' },
     { href: '/chats', label: 'Messages', icon: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z', badge: unreadMessages },
@@ -120,7 +120,7 @@ export function DesktopSidebar() {
   return (
     <aside className="hidden lg:flex sticky top-0 h-screen z-20 w-60 shrink-0 flex-col border-r border-[#3A3A34] bg-[#1A1A18]/95 backdrop-blur-xl">
       <div className="px-5 py-6">
-        <Link href="/" className="text-2xl font-bold text-[#F5F0E8]">Localy</Link>
+        <Link href="/feed" className="text-2xl font-bold text-[#F5F0E8]">Localy</Link>
       </div>
       <nav className="px-3 space-y-1">
         {navItems.map((item) => {
