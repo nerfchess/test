@@ -20,6 +20,17 @@ export function AppBottomNav() {
   const [unreadMessages, setUnreadMessages] = useState(0);
   const [pendingOrders, setPendingOrders] = useState(0);
 
+  const getActiveHref = () => {
+    if (pathname === '/feed') return '/feed';
+    if (pathname?.startsWith('/search')) return '/search';
+    if (pathname?.startsWith('/upload')) return '/upload';
+    if (pathname?.startsWith('/chats')) return '/chats';
+    if (pathname?.startsWith('/cart')) return '/cart';
+    if (pathname?.startsWith('/dashboard')) return '/dashboard';
+    if (pathname?.startsWith('/profile')) return '/profile';
+    return null;
+  };
+
   useEffect(() => {
     if (!user) {
       setIsBusiness(false);
@@ -105,24 +116,13 @@ export function AppBottomNav() {
     });
   }, [pathname]);
 
-  const getActiveHref = () => {
-    if (pathname === '/') return '/';
-    if (pathname?.startsWith('/search')) return '/search';
-    if (pathname?.startsWith('/upload')) return '/upload';
-    if (pathname?.startsWith('/chats')) return '/chats';
-    if (pathname?.startsWith('/cart')) return '/cart';
-    if (pathname?.startsWith('/dashboard')) return '/dashboard';
-    if (pathname?.startsWith('/profile')) return '/profile';
-    return null;
-  };
-
   if (pathname === '/login' || pathname === '/signup' || pathname === '/reset-password') {
     return null;
   }
 
   const isActive = (href: string) => {
-    if (href === '/') {
-      return pathname === '/';
+    if (href === '/feed') {
+      return pathname === '/feed';
     }
 
     return pathname?.startsWith(href);
@@ -131,7 +131,7 @@ export function AppBottomNav() {
   // Define nav items exactly once
   const navItems = [
     {
-      href: '/',
+      href: '/feed',
       label: 'Home',
       icon: <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />,
       fillIcon: true,
@@ -180,7 +180,7 @@ export function AppBottomNav() {
 
   return (
     <nav className={`fixed bottom-0 left-0 right-0 z-30 border-t border-[#3A3A34] lg:hidden ${
-      pathname === '/' ? 'bg-[#1A1A18]/80 backdrop-blur-md' : 'bg-charcoal'
+      pathname === '/feed' ? 'bg-[#1A1A18]/80 backdrop-blur-md' : 'bg-charcoal'
     }`}>
       {/* Animated Indicator Bar */}
       <div

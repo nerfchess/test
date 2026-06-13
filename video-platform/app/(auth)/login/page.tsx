@@ -121,7 +121,7 @@ function LoginPageContent() {
     }
 
     if (data?.session) {
-      router.push(isEmailVerified ? '/onboarding' : '/');
+      router.push(isEmailVerified ? '/onboarding' : '/feed');
       router.refresh();
     }
   };

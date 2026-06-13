@@ -298,7 +298,7 @@ function UserProfileContent() {
       }
       setToastColor('amber');
       setToastMessage(`@${profile.username} has been blocked`);
-      setTimeout(() => router.push('/'), 1200);
+      setTimeout(() => router.push('/feed'), 1200);
     } catch {
       setToastColor('red');
       setToastMessage('Failed to block user');
@@ -422,7 +422,7 @@ function UserProfileContent() {
           <h2 className="text-2xl font-bold text-[#F5F0E8] mb-4">Profile Not Found</h2>
           <p className="text-[#F5F0E8]/60 mb-6">{error || 'This profile does not exist.'}</p>
           <Link
-            href="/"
+            href="/feed"
             className="bg-[#F5A623] text-black font-semibold px-6 py-3 rounded-lg hover:bg-[#F5A623]/90 transition-all duration-200"
           >
             Back to Home
@@ -704,7 +704,7 @@ function UserProfileContent() {
       {/* Bottom Navigation Hotbar */}
       <div className="fixed bottom-0 left-0 right-0 z-20 bg-[#1A1A18]/50 backdrop-blur-md border-t border-[#3A3A34]">
         <div className="flex items-center justify-around py-3">
-          <Link href="/" className="flex flex-col items-center gap-1 transition-transform duration-200 hover:scale-110 active:scale-95">
+          <Link href="/feed" className="flex flex-col items-center gap-1 transition-transform duration-200 hover:scale-110 active:scale-95">
             <svg className={`w-6 h-6 ${pathname === '/' ? 'text-[#F5F0E8]' : 'text-[#F5F0E8]/60'}`} fill="currentColor" viewBox="0 0 24 24">
               <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
             </svg>

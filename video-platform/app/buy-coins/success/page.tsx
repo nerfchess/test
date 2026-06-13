@@ -88,7 +88,7 @@ function CheckoutSuccessContent() {
               Go to Profile
             </Link>
             <Link
-              href="/"
+              href="/feed"
               className="block bg-white/10 hover:bg-white/20 text-white py-3 rounded-lg transition-all"
             >
               Back to Home

@@ -43,12 +43,12 @@ export default function OnboardingPage() {
       }
     }
 
-    router.push('/');
+    router.push('/feed');
     router.refresh();
   };
 
   const handleSkip = () => {
-    router.push('/');
+    router.push('/feed');
     router.refresh();
   };
 

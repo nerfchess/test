@@ -330,7 +330,7 @@ function UploadContent() {
               </button>
               <button
                 onClick={() => {
-                  router.push('/');
+                  router.push('/feed');
                   router.refresh();
                 }}
                 className="px-6 py-3 bg-[#F5A623] hover:bg-[#F5A623]/90 text-black rounded-xl font-semibold transition-all flex items-center gap-2 min-h-[48px] active:scale-[0.98]"
@@ -376,7 +376,7 @@ function UploadContent() {
 
             <div className="flex gap-3 justify-center pt-4">
               <button
-                onClick={() => router.push('/')}
+                onClick={() => router.push('/feed')}
                 className="px-6 py-3 bg-[#242420] hover:bg-[#2E2E28] border border-[#3A3A34] rounded-xl font-semibold transition-all min-h-[48px]"
               >
                 View Feed
@@ -576,7 +576,7 @@ function UploadContent() {
           onClose={() => {
             setShowPromotionModal(false);
             if (uploadedVideoId !== 'temp') {
-              router.push('/');
+              router.push('/feed');
               router.refresh();
             }
             if (uploadedVideoId === 'temp') {
@@ -591,7 +591,7 @@ function UploadContent() {
           onSuccess={(newBoost, coinsSpent, remainingCoins) => {
             setUserCoins(remainingCoins);
             setShowPromotionModal(false);
-            router.push('/');
+            router.push('/feed');
             router.refresh();
           }}
         />
